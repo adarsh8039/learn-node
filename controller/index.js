@@ -1,3 +1,4 @@
 module.exports={
-    ProdCtrl:require("./product.controller")
+    ProdCtrl:require("./product.controller"),
+    CatCtrl:require("./category.controller")
 }

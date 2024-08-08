@@ -24,6 +24,16 @@ db.Sequelize = Sequelize;
 
 // require all models
 db.Product=require("./product")(sequelize,DataTypes);
+db.Category=require("./category")(sequelize,DataTypes);
+
+// Relationship
+
+db.Product.hasMany(db.Category,{
+  foreignKey:"category_id"
+})
+db.Category.belongsTo(db.Product,{
+  foreignKey:"category_id"
+})
 
 try {
     sequelize.authenticate();

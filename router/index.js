@@ -3,6 +3,7 @@ const express= require("express");
 const router= express.Router();
 
 router.use(require("./product.routes"))
+router.use(require("./category.routes"))
 router.get("/home", async(request, response)=>{
     response.send("Welcome to home page");
 })

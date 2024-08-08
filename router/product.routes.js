@@ -21,4 +21,6 @@ router.get("/sum",  async (req, res) => {
   //   // res.status(result.status).send(result)
   //   })
 
+  router.get("/product-list", prodCtrl.list)
+
 module.exports=router;
